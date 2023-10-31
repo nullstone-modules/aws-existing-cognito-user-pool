@@ -1,0 +1,13 @@
+org_name: nullstone
+name: aws-existing-cognito-user-pool
+friendly_name: AWS Existing Cognito User Pool
+description: Stores user-pool-client info for connecting to an existing AWS Cognito user pool.
+category: datastore
+subcategory: ""
+provider_types:
+    - aws
+platform: cognito
+subplatform: ""
+type: ""
+appCategories: []
+is_public: true

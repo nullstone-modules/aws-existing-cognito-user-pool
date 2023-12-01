@@ -7,3 +7,8 @@ variable "client_id" {
   type        = string
   description = "The id of the existing user pool client. e.g. abcdefabcdef1234567890123"
 }
+
+variable "web_client_id" {
+  type        = string
+  description = "The web id of the existing user pool client. e.g. abcdefabcdef1234567890123"
+}

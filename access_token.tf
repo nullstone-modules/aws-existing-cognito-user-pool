@@ -3,7 +3,7 @@ resource "aws_secretsmanager_secret" "access_key_id" {
   tags = local.tags
 }
 
-resource "aws_secretsmanager_secret_version" "api_key" {
+resource "aws_secretsmanager_secret_version" "access_key_id" {
   secret_id     = aws_secretsmanager_secret.access_key_id.id
   secret_string = var.access_key_id
 }

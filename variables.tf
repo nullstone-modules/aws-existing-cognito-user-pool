@@ -8,9 +8,9 @@ variable "client_id" {
   description = "The id of the existing user pool client. e.g. abcdefabcdef1234567890123"
 }
 
-variable "web_client_id" {
+variable "identity_pool_id" {
   type        = string
-  description = "The web id of the existing user pool client. e.g. abcdefabcdef1234567890123"
+  description = "The id of the existing identity pool. e.g. us-east-1:abcd01234-ab01-cd23-ef45-abcd012345678"
 }
 
 variable "access_key_id" {

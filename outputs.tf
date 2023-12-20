@@ -8,9 +8,9 @@ output "client_id" {
   description = "string ||| The id of the user pool client."
 }
 
-output "web_client_id" {
-  value       = var.web_client_id
-  description = "string || The web client id of the user pool."
+output "identity_pool_id" {
+  value       = var.identity_pool_id
+  description = "string ||| The id of the identity pool."
 }
 
 output "access_key_id_secret_id" {

@@ -8,6 +8,13 @@ variable "client_id" {
   description = "The id of the existing user pool client. e.g. abcdefabcdef1234567890123"
 }
 
+variable "client_secret" {
+  type        = string
+  default     = ""
+  sensitive   = true
+  description = "The client secret of the existing user pool app client."
+}
+
 variable "identity_pool_id" {
   type        = string
   description = "The id of the existing identity pool. e.g. us-east-1:abcd01234-ab01-cd23-ef45-abcd012345678"

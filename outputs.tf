@@ -14,7 +14,7 @@ output "identity_pool_id" {
 }
 
 output "client_secret_secret_id" {
-  value       = var.client_secret != "" ? aws_secretsmanager_secret.client_secret.id : ""
+  value       = var.client_secret != "" ? aws_secretsmanager_secret.client_secret[0].id : ""
   description = "string ||| The secret id for the AWS secrets manager secret that contains the client_secret for the cognito user pool. Will return an empty string if the parameter is not provided in the inputs."
 }
 

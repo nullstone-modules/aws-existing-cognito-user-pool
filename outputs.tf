@@ -19,11 +19,11 @@ output "client_secret_secret_id" {
 }
 
 output "access_key_id_secret_id" {
-  value       = aws_secretsmanager_secret.access_key_id.id
+  value       = var.access_key_id != "" ? aws_secretsmanager_secret.access_key_id[0].id : ""
   description = "string ||| The secret id for the AWS secrets manager secret that contains the access key id for the cognito user pool."
 }
 
 output "secret_access_key_secret_id" {
-  value       = aws_secretsmanager_secret.secret_access_key.id
+  value       = var.secret_access_key != "" ? aws_secretsmanager_secret.secret_access_key[0].id : ""
   description = "string ||| The secret id for the AWS secrets manager secret for the secret access key for the cognito user pool."
 }

@@ -8,6 +8,16 @@ output "client_id" {
   description = "string ||| The id of the user pool client."
 }
 
+output "jwt_issuer" {
+  value       = "https://cognito-idp.${split("_", var.user_pool_id)[0]}.amazonaws.com/${var.user_pool_id}"
+  description = "string ||| The OIDC issuer (token endpoint) used to validate JWTs minted by this user pool. The region is derived from the user pool id."
+}
+
+output "jwt_audiences" {
+  value       = [var.client_id]
+  description = "list(string) ||| The allowed JWT audiences (the user pool client ids). A JWT authorizer validates the token's `aud` claim (or `client_id` for Cognito access tokens) against this list."
+}
+
 output "identity_pool_id" {
   value       = var.identity_pool_id
   description = "string ||| The id of the identity pool."
